@@ -9,10 +9,13 @@ def main():
     # Turn on the corresponding LED
     print("hello")
     if option == 1:
+        # Turn on red LED
         print("Red")
     elif option == 2:
+        # Turn on green LED
         print("Green")
     elif option == 3:
+        # Turn on blue LED
         print("Blue")
 
     # need code to timeout after x seconds
@@ -23,8 +26,8 @@ def main():
 
     choice = input()
 
-    if(int(choice) == option):
-        # activate servo control to release treat
+    if int(choice) == option:
+        # activate servo control to release treat/reward
         # send call to AWS to store data
         print("correct!")
     else:
