@@ -7,6 +7,7 @@ def main():
     option = random.randint(1, 3)
 
     # Turn on the corresponding LED
+    print("hello")
     if option == 1:
         print("Red")
     elif option == 2:
