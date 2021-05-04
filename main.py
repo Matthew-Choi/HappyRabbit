@@ -65,6 +65,7 @@ def main():
             print("incorrect!")
             print("")
 
+    turnOffAll()
 def setLedsALL():
     # red
     pixels[0] = (255, 0, 0)
