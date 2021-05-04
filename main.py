@@ -48,7 +48,7 @@ def main():
 
         get_button()
         choice = input()
-        if input == "e":
+        if choice == "e":
             turnOffAll()
             break
         elif int(choice) == option:
