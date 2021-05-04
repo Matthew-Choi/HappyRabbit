@@ -48,8 +48,10 @@ def main():
 
         get_button()
         choice = input()
-
-        if int(choice) == option:
+        if input == "e":
+            turnOffAll()
+            break
+        elif int(choice) == option:
             # activate servo control to release treat/reward
             # run_servo()
             kit.servo[4].angle = 180
