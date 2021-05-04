@@ -20,8 +20,8 @@ kit = ServoKit(channels=16)
 
 
 def main():
-    turnOffAll()
-    while 1: 
+    while 1:
+        turnOffAll()
         random.seed(time.time())
         option = random.randint(1, 3)
 
