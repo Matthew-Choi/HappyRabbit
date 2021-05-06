@@ -8,6 +8,7 @@ from adafruit_servokit import ServoKit
 import board
 import neopixel
 import time
+import digitalio
 
 # Configure the setup for LED
 PIXEL_PIN = board.D18 # pin that is connected to the boar
@@ -18,6 +19,9 @@ pixels = neopixel.NeoPixel(PIXEL_PIN, 60, brightness=0.2)
 # servos
 kit = ServoKit(channels=16)
 
+# button
+blue_button = digitalio.DigitalInOut(board.D4)
+blue_button.direction = digitalio.Direction.INPUT
 
 def main():
     while 1:
@@ -46,8 +50,8 @@ def main():
         # https://stackoverflow.com/questions/1335507/keyboard-input-with-timeout
         # https://gist.github.com/atupal/5865237
 
-        get_button()
-        choice = input()
+        choice = get_button()
+        # choice = input()
         if choice == "e":
             turnOffAll()
             break
@@ -66,6 +70,14 @@ def main():
             print("")
 
     turnOffAll()
+
+def get_button_input():
+    bIn = 0
+    while bIn == 0:
+        if blue_button.value:
+            bIn = 3
+    return bIn
+
 def setLedsALL():
     # red
     pixels[0] = (255, 0, 0)
