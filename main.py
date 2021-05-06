@@ -70,8 +70,8 @@ def main():
             print("incorrect!")
             print("")
 
+        time.sleep(3)
     turnOffAll()
-    time.sleep(5)
 
 def get_button_input():
     bIn = 0
