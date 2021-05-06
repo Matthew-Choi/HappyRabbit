@@ -50,7 +50,7 @@ def main():
         # https://stackoverflow.com/questions/1335507/keyboard-input-with-timeout
         # https://gist.github.com/atupal/5865237
 
-        choice = get_button()
+        choice = get_button_input()
         print(choice)
         # choice = input()
         if choice == "e":
