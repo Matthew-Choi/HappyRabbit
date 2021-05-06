@@ -51,7 +51,7 @@ def main():
         # https://gist.github.com/atupal/5865237
 
         choice = get_button_input()
-        print(choice)
+
         # choice = input()
         if choice == "e":
             turnOffAll()
@@ -71,6 +71,7 @@ def main():
             print("")
 
     turnOffAll()
+    time.sleep(5)
 
 def get_button_input():
     bIn = 0
