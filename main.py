@@ -51,6 +51,7 @@ def main():
         # https://gist.github.com/atupal/5865237
 
         choice = get_button()
+        print(choice)
         # choice = input()
         if choice == "e":
             turnOffAll()
